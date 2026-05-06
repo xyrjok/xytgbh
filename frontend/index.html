@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram 保号后台</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container mt-5">
+  <h2 class="mb-4">Telegram 保号后台</h2>
+
+  <!-- 添加账号表单 -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h5>添加新账号</h5>
+      <form id="addAccountForm">
+        <div class="mb-3">
+          <label class="form-label">手机号</label>
+          <input type="text" class="form-control" id="phone" required>
+        </div>
+        <button type="submit" class="btn btn-primary">添加账号</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 账号列表 -->
+  <div class="card">
+    <div class="card-body">
+      <h5>账号列表</h5>
+      <table class="table table-bordered" id="accountTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>手机号</th>
+            <th>状态</th>
+            <th>最后活跃</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button class="btn btn-success" id="keepAliveBtn">批量保号</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
